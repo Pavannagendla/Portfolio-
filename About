@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:: hacker_camerawork ::</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+body{
+  background-color: black;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e8597;
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e8597; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e8597; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+  background-size: cover;
+  background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #7e8597;
+    text-transform: Uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e857e; /* Header text color */
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e857e; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e857e; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+h3, h1, h2, p, h4{
+    color: white;
+}
+div{
+    color: #7e857e;
+}
+
+.bread-crumb {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.bread-crumb li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* About Section */
+.about-section-three {
+  padding: 60px 0;
+}
+
+.about-section-three h1 {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+.about-section-three p{
+  color: white;
+  font-size: 28px;
+  padding: 0 160px;
+}
+.about-section-three p:hover {
+  color: #009688;
+}
+
+.about-text-block {
+  text-align: center;
+}
+
+.top-content {
+  margin-bottom: 20px;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(creator2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon {
+  font-size: 48px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto 20px;
+}
+
+/* CSS to make the image circular */
+.circular-image {
+  border-radius: 50%;
+}
+/* CSS to make the image circular with a specified size */
+.circular-image {
+  width: 200px; /* Adjust the width to set the size of the circular image (2 * radius) */
+  height: 200px; /* Adjust the height to match the width for a perfect circle */
+  border-radius: 50%; /* Set border-radius to 50% for a perfect circle */
+}
+
+.content-text h2 {
+  font-size: 27px;
+  margin: 0;
+}
+
+.lower-content h4 {
+  font-size: 27px;
+  margin: 20px 0;
+}
+
+.text p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.year-of-service {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+}
+.year-of-service:hover {
+  font-size: 24px;
+  color: white;
+}
+
+/* Footer Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 0; /* Remove margin from the top */
+}
+
+.copyright-text {
+  font-size: 16px;
+  margin-top: 0; /* Remove margin around the copyright text */
+}
+
+h1{
+    text-align: left;
+    margin: 150px;
+}
+.lower-content {
+  background-color: black; /* Set the background color to black */
+  padding: 20px; /* Add padding to create space between content and the background */
+  color: white; /* Set text color to white for the entire section */
+  border-radius: 5px; /* Optionally, round the corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optionally, add a box shadow */
+}
+
+/* Style for headings (h4 and h3) */
+.lower-content h4,
+.text h3 {
+  color: #009688; /* Set heading text color to a cool highlight color */
+  font-size: 24px; /* Increase font size for headings */
+  margin: 20px 0; /* Add spacing around headings */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Example hover effect on headings */
+.lower-content h4:hover,
+.text h3:hover {
+  color: #009688; /* Change heading text color on hover to a lighter shade */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Page Title Section */
+.page-title {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative; /* Add position relative to position the text */
+}
+
+.page-title h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-top: 200px; /* Add margin-top to adjust the vertical position */
+}
+
+/* New styles for mobile view */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .main-header {
+    padding: 10px 10px; /* Adjust header padding */
+  }
+
+  .navbar {
+    width: 95%; /* Adjust width of the navbar */
+  }
+
+  .logo {
+    width: 100px; /* Adjust logo size */
+  }
+
+  .gallery img {
+    width: calc(50% - 10px); /* Adjust image size for smaller screens */
+  }
+
+  /* Other adjustments as needed for a better mobile experience */
+}
+
+</style>
+
+</head>
+<body>
+   <!-- main header -->
+    <header class="main-header"> 
+        <!-- header left -->
+        <div class="header-left">
+            <ul class="topbar-info">
+                <li><i class="icon-pin"></i> Nellore, Andhra Pradesh</li>
+                <li><i class="icon-mail"></i> <a href="mailto:hackercamerawork@gmail.com">hackercamerawork@gmail.com</a></li>
+                <li><i class="icon-phone"></i> +91-7981471527</li>
+            </ul>
+        </div>
+        
+        <!-- header right -->
+        <div class="header-right"> 
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <!-- Your page content goes here -->
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo w.png" class="logo" style="margin-top: 10px;">
+            <ul>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="Posts.html" style="color: white;">Gallery</a></li>
+                <li><a href="Projects.html" style="color: white;">Projects</a></li>
+                <li><a href="About.html" style="color: white;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+            </ul>
+        </div>
+
+        <section class="about-section-three sp-four grey-bg">
+          <div class="container">
+              <h1 style="margin-top: 5px; text-align: left;">About Me</h1>
+          </div>
+          <div class="row mb-50">
+              <div class="col-lg-12">
+                  <div class="about-text-block">
+                      <!-- Your circular image here -->
+                      <div class="content-text" style="text-align: left;">
+                          <!-- Your "About Me" content here -->
+                          <p>I am a graduate engineer by profession and a passionate photographer by choice.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section class="about-section-three sp-four grey-bg">
+          <div class="container">
+              <h1 style="margin-top: 5px;">About My Photography</h1>
+          </div>
+          <div class="row mb-50">
+              <div class="col-lg-12">
+                  <div class="about-text-block">
+            <div class="top-content">
+              <div class="inner-box">
+                <img src="creator2.jpg" alt="creator" class="circular-image">
+                <div class="content-text">
+                </div>
+              </div>
+            </div>
+            <div class="lower-content">
+              <h4>My passion for photography is a valuable and enriching part of my life that will continue to bring me joy and fulfillment.</h4>
+              <div class="text">
+                <p>In the midst of the pandemic's trying days, a flicker of inspiration ignited within me. Those gloomy times, marked by the shadow of COVID-19, provided an unexpected opportunity for me to unearth my hidden passion for photography.</p>
+                <p>At the outset, I was blissfully ignorant about the art of photography, save for the fact that I was armed with a DSLR camera and the knowledge that Canon and Nikon were its esteemed custodians. What initially drew me in was the prospect of joining my friends on their photoshoot adventures. The camera itself remained a mysterious contraption, lurking in the background as I eagerly accompanied my friends.</p>
+                <p>However, the turning point came during my third photoshoot, when I mustered the courage to take the reins and capture an image under the guidance of a seasoned friend. That day, something remarkable happened, a spark ignited within me. It was as if the universe whispered a secret to me—the secret of my passion.</p>
+                <p>The very next day, I ventured out to secure a camera on rent, embarking on a journey that would forever change my life. As I began clicking photographs, I delved into the intricacies of the camera. Google and YouTube became my trusty companions, offering an endless well of knowledge. I hungrily devoured videos, tutorials, and articles, soaking in every piece of information like a sponge.</p>
+                <p>I gradually unlocked the mysteries of camera models, specifications, and the art of wielding them. The theoretical concepts I devoured from online resources became the building blocks of my photographic prowess. With each passing day, my skills improved, and I painstakingly honed my craft. I learned the vital checklist of criteria required for crafting the perfect shot, a symphony of lighting, composition, and timing.</p>
+                <h3>Milestone Step </h3>
+                <p>My passion for photography was unearthed, nurtured, and transformed into a burning fire within me. In February 2021, after months of arduous dedication, I made the monumental decision to invest in my own camera. Two years and six months have since flown by, marked by countless shutter clicks, framing the world through my lens. Photography has not only become my passion but a way of life. It's a canvas upon which I paint my emotions, my stories, and my unique perspective. The camera has transcended its status as a mere tool; it has become an extension of my heart and soul.</p>
+                <p>As I continue on this journey, I'm reminded that the world of photography is vast, ever-evolving, and teeming with endless possibilities. Whether capturing breathtaking landscapes, immortalizing the depth of human emotion, or venturing into uncharted territories of creativity, my voyage in photography has only just begun. With each click, I endeavor to create moments that resonate with others, to tell stories that inspire, and to capture the world's beauty in ways previously unseen. My passion for photography is not just a hobby; it's a profound part of who I am, a journey of self-discovery that promises to unfold new chapters, each more enchanting than the last.</p><br>
+              </div>
+              <div class="year-of-service">Since 2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!--Footer Bottom-->
+    <div class="footer-bottom">
+        <div class="container">
+          <div class="container-wrapper">
+            <div class="copyright-text"> All Rights Reserved &copy; 2021 | Hacker_Camerawork</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--End pagewrapper--> 
+
+
+</body>
+</html> 
