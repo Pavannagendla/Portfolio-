@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:: hacker_camerawork ::</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+body{
+  background-color: black;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e8597;
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e8597; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e8597; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #7e8597;
+    text-transform: Uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.image-section {
+  flex: 1;
+  text-align: right;
+  position: relative; /* Position relative for shadow effect */
+}
+
+.image-section img {
+  width: 220px; /* Fixed width */
+  height: 20px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 50%; /* Create a circular shape */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Apply a slight shadow effect */
+  overflow: hidden; /* Hide overflowing parts outside the circle */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow */
+  margin-right: 230px;
+}
+
+.image-section img:hover {
+  transform: scale(1.1) rotateY(10deg); /* Scale up and rotate the image on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+
+.content h1 {
+  font-size: 68px;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content h3 {
+  font-size: 18px;
+  color: #555;
+  margin-left: 5px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.content button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.content button:hover {
+  background-color: #0056b3;
+}
+.image-section {
+  flex: 1;
+  text-align: right;
+  position: relative; /* Position relative for shadow effect */
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Create a circular shape */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Apply a slight shadow effect */
+  overflow: hidden; /* Hide overflowing parts outside the circle */
+}
+
+button{
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+
+  p a {
+    color: #ffffff; /* Change link color */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Add underline to the link */
+  }
+
+  p a:hover {
+    color: #009688; /* Change link color on hover */
+  }
+
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e857e; /* Header text color */
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e857e; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e857e; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+h3, h1, h2, p, h4{
+    color: white;
+}
+div{
+    color: #7e857e;
+}
+
+.bread-crumb {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.bread-crumb li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Style the Portrait section */
+#portrait-section, #wildlife-section, #birds-section, #architecture-section, #sunrise-sunset-section, #street-section, #butterfly-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: black;
+}
+
+#portrait-section h2, #wildlife-section  h2,#birds-section h2, #architecture-section h2, #sunrise-sunset-section h2, #street-section h2, #butterfly-section h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#portrait-section p, #wildlife-section p, #birds-section p, #architecture-section p, #sunrise-sunset-section p, #street-section p, #butterfly-section p{
+    font-size: 24px;
+    color:#555;
+    padding: 10px 70px;
+    margin: 10px;
+}
+
+/* Style the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    z-index: 9999;
+    overflow: auto;
+}
+  
+  /* Style the modal content (the image) */
+  .modal-content {
+    display: block;
+    margin: 10% auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    top: 40px;
+    left: 1420px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+/* Style the image gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Align images to the center */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    gap: 10px;
+    overflow: auto;
+    padding: 0 20px; /* Adjust horizontal padding */
+  }
+
+  .image-gallery img {
+    width: 400px;
+    height: 560px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+  }
+  #fullImage {
+  max-width: 80vw; /* Adjust the maximum width as needed */
+  max-height: 80vh; /* Adjust the maximum height as needed */
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+  /* Add hover effect to h2 headings */
+  h2 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    margin: 0;
+    transition: color 0.3s ease; /* Add a smooth transition */
+  }
+
+  h2:hover {
+    color: #009688; /* Change color on hover */
+  }
+
+  .section {
+  padding-top: 20px; /* Adjust as needed */
+  padding-bottom: 20px; /* Adjust as needed */
+  margin-top: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Style for the brief section */
+.brief {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  cursor: pointer;
+}
+
+.brief h3 {
+  font-size: 30px;
+  color: #009688;
+  transition: margin-top 0.3s ease; /* Transition for heading movement */
+  margin-top: 10px; /* Initial margin */
+}
+
+.brief p {
+  font-size: 22px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+  opacity: 0; /* Initially hide the paragraph */
+  transition: opacity 0.3s ease; /* Transition for paragraph opacity */
+}
+
+.brief:hover h3 {
+      margin-top: 0; /* Move the heading up on hover */
+    }
+
+    .brief:hover p {
+      opacity: 1; /* Reveal the paragraph when .brief is hovered over */
+    }
+
+    .hidden {
+  display: none;
+}
+
+.option {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Added margin for the entire box */
+    max-width: 1440px; /* Added maximum width to prevent excessive stretching */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+
+  .option h2 {
+    font-size: 32px;
+    color: #009688;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .option p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  h4{
+    font-size: 30px;
+    text-align: center;
+    margin: 60px 300px 0 300px;
+    background-color: #009688;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  .see.more {
+  text-align: center;
+  margin: 10px;
+  margin-top: -20px;
+}
+
+.see.more a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(45, 51, 53);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 10px;
+}
+
+
+/* Footer Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Copyright Text */
+.copyright-text {
+  font-size: 16px;
+}
+
+/* New styles for mobile view */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .main-header {
+    padding: 10px 10px; /* Adjust header padding */
+  }
+
+  .navbar {
+    width: 95%; /* Adjust width of the navbar */
+  }
+
+  .logo {
+    width: 100px; /* Adjust logo size */
+  }
+
+  .gallery img {
+    width: calc(50% - 10px); /* Adjust image size for smaller screens */
+  }
+
+  /* Other adjustments as needed for a better mobile experience */
+}
+</style>
+</head>
+
+<body>
+   <!-- main header -->
+    <header class="main-header"> 
+        <!-- header left -->
+        <div class="header-left">
+            <ul class="topbar-info">
+                <li><i class="icon-pin"></i> Nellore, Andhra Pradesh</li>
+                <li><i class="icon-mail"></i> <a href="mailto:hackercamerawork@gmail.com">hackercamerawork@gmail.com</a></li>
+                <li><i class="icon-phone"></i> +91-7981471527</li>
+            </ul>
+        </div>
+        
+        <!-- header right -->
+        <div class="header-right"> 
+            <a href="https://www.facebook.com/pavankumar.kalyan.96/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/hackercameraart" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com//hacker_camerawork" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <!-- Your page content goes here -->
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo w.png" class="logo" style="margin-bottom: 10px">
+            <ul>
+                <li><a href="index.html" style="color: #fff;">Home</a></li>
+                <li><a href="Posts.html" style="color: #fff;">Gallery</a></li>
+                <li><a href="Projects.html" style="color: #fff;">Projects</a></li>
+                <li><a href="About.html" style="color: #fff;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--End Header Upper--> 
+           
+    <div class="content">
+      <div class="content-wrapper">
+        <div class="text-section">
+          <h1>HACKER_CAMERAWORK</h1>
+          <br>
+          <h3>CHECK ME ON INSTAGRAM FOR MORE UPDATES</h3>
+          <p><a href="https://www.instagram.com/explore/tags/hacker_camerawork/" target="_blank">#hacker_camerawork</a></p>
+          <div>
+            <a href="https://www.instagram.com//hacker_camerawork" target="_blank"><button type="button"><span></span>Know More</button></a>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="creator1.jpg" alt="Your Image">
+        </div>
+      </div>
+    </div>
+    
+
+  <!-- What is hacker cameraork???-->
+  <div class="option">
+    <h2>What is Hacker_Camerwork???</h2>
+    <p>"Step into a world of captivating stories and unseen beauty. My journey from novice to passionate photographer is a testament to dedication and growth.
+      Each click resonates with emotions, inspiring moments, and a unique perspective.<br> Explore endless possibilities and witness the unfolding passion that promises to unveil enchanting chapters, one click at a time."<br><br> With every photograph, I aim not just to freeze moments but to encapsulate emotions, weaving tales that transcend time. Each frame invites you to delve deeper into the narratives hidden within, painting vivid portraits of life's intricate tapestry. Through my lens, I strive to capture the essence of fleeting moments, preserving them as timeless treasures.</p>
+  </div>
+    
+
+  <div class="brief">
+    <h3 id="brief-heading">INSPIRATION</h3>
+    <p id="brief-paragraph" class="hidden">
+      "Photography became my soul's language, unveiling beauty in the ordinary, transforming the chapters of my life into captivating frames."
+    </p>
+  </div>
+
+  <div class="latest">
+    <h4> Latest Photos </h4>
+  </div>
+  
+  
+    <section class="section">
+      <h2>Bird Photography</h2>
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="images/Birds/pigeon1.jpg"
+          alt="bird 1"
+          loading="lazy"
+          onclick="openImage('images/Birds/pigeon1.jpg')"
+        />
+        <img
+          src="images/Birds/pigeon2.jpg"
+          alt="bird 2"
+          loading="lazy"
+          onclick="openImage('images/Birds/pigeon2.jpg')"
+        />
+        <img
+          src="images/Birds/pigeon4.jpg"
+          alt="bird 4"
+          loading="lazy"
+          onclick="openImage('images/Birds/pigeon4.jpg')"
+        />
+  
+        <!-- Add more images as needed -->
+      </div>
+      <!-- Full-screen Image Modal -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="fullImage" class="modal-content" src="" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Food Photography</h2>
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="images/Food/item1.jpg"
+          alt="Portrait 1"
+          loading="lazy"
+          onclick="openImage('images/Food/item1.jpg')"
+        />
+        <img
+          src="images/Food/item2.jpg"
+          alt="Portrait 2"
+          loading="lazy"
+          onclick="openImage('images/Food/item2.jpg')"
+        />
+        <img
+          src="images/Food/item3.jpg"
+          alt="Portrait 3"
+          loading="lazy"
+          onclick="openImage('images/Food/item3.jpg')"
+        />
+  
+        <!-- Add more images as needed -->
+      </div>
+      <!-- Full-screen Image Modal -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="fullImage" class="modal-content" src="" />
+      </div>
+    </section>
+  
+    <section class="section">
+      <h2>Wildlife Photography</h2>
+  
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="images/Wildlife/Grey Langur.jpg"
+          alt="Portrait 1"
+          loading="lazy"
+          onclick="openImage('images/Wildlife/Grey Langur.jpg')"
+        />
+        <img
+          src="images/Wildlife/Squirrel.jpg"
+          alt="Portrait 2"
+          loading="lazy"
+          onclick="openImage('images/Wildlife/Squirrel.jpg')"
+        />
+        <img
+          src="images/Wildlife/_HCP3068 copy.jpg"
+          alt="Portrait 4"
+          loading="lazy"
+          onclick="openImage('images/Wildlife/_HCP3068 copy.jpg')"
+        />
+        <!-- Add more images as needed -->
+      </div>
+      <!-- Full-screen Image Modal -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="fullImage" class="modal-content" src="" />
+      </div>
+    </section>
+  
+    <section class="section">
+      <h2>Architecture Photography</h2>
+  
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="images/Architecture/_DIA0972 (1).jpg"
+          alt="Portrait 1"
+          loading="lazy"
+          onclick="openImage('images/Architecture/_DIA0972 (1).jpg')"
+        />
+        <img
+          src="images/Architecture/_HCP8124.jpg"
+          alt="Portrait 3"
+          loading="lazy"
+          onclick="openImage('images/Architecture/_HCP8124.jpg')"
+        />
+        <img
+          src="images/Architecture/_HCP8192 (1).jpg"
+          alt="Portrait 4"
+          loading="lazy"
+          onclick="openImage('images/Architecture/_HCP8192 (1).jpg')"
+        />
+        <!-- Add more images as needed -->
+      </div>
+      <!-- Full-screen Image Modal -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="fullImage" class="modal-content" src="" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Street Photography</h2>
+  
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <img
+          src="images/Portaits/_DIA9875 copy.jpg"
+          alt="Portrait 1"
+          loading="lazy"
+          onclick="openImage('images/Portaits/_DIA9875 copy.jpg')"
+        />
+        <img
+          src="images/Portaits/DSC_0105 copy (1).jpg"
+          alt="Portrait 2"
+          loading="lazy"
+          onclick="openImage('images/Portaits/DSC_0105 copy (1).jpg')"
+        />
+
+        <img
+          src="images/Portaits/HCP_0993 copy.jpg"
+          alt="Portrait 4"
+          loading="lazy"
+          onclick="openImage('images/Portaits/HCP_0993 copy.jpg')"
+        />
+        <!-- Add more images as needed -->
+      </div>
+      <!-- Full-screen Image Modal -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="fullImage" class="modal-content" src="" />
+      </div>
+    </section>
+
+    <div class="see more">
+      <a href="Posts.html">See More</a>
+    </div>
+    
+        <!--Footer Bottom-->
+      <div>
+        <footer>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="container-wrapper">
+                <div class="copyright-text"> All Rights Reserved &copy; 2021 | Hacker_Camerawork</div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!--End pagewrapper--> 
+
+        
+  <script>
+    // Function to open the image in full-screen mode
+    function openImage(imageUrl) {
+      var modal = document.getElementById("imageModal");
+      var fullImage = document.getElementById("fullImage");
+
+      fullImage.src = imageUrl;
+      modal.style.display = "block";
+    }
+
+    // Function to close the full-screen image
+    function closeImage() {
+      var modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+
+    const onSubmit = (formData) => {
+      const mailtoLink = `mailto:hackercamerawork@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+      window.location.href = mailtoLink;
+    };
+
+    function onSubmitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const formData = { name, email, subject, message };
+      // Construct the mailto link
+      const mailtoLink = `mailto:hackercamerawork@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+
+      // Open the user's default email client
+      window.location.href = mailtoLink;
+    }
+
+    const brief = document.querySelector('.brief');
+
+brief.addEventListener('mouseenter', () => {
+  document.getElementById('brief-heading').style.display = 'none';
+  document.getElementById('brief-paragraph').style.display = 'block';
+});
+
+brief.addEventListener('mouseleave', () => {
+  document.getElementById('brief-heading').style.display = 'block';
+  document.getElementById('brief-paragraph').style.display = 'none';
+});
+
+</script>
+    
+
+</body>
+</html>
+
