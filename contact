@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:: hacker_camerawork ::</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+body{
+  background-color: black;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e8597;
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e8597; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e8597; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #7e8597;
+    text-transform: Uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* Footer Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 16px;
+}
+/* Contact Us Section Styles */
+.contact-section {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center; /* Center align content */
+}
+
+.contact-section .container {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* Align labels to the left */
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: calc(100% - 22px); /* Adjusted width */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Reduced margin */
+    display: block;
+}
+
+.contact-section textarea {
+    height: 120px;
+}
+
+.contact-section button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.contact-section button[type="submit"]:hover {
+    background-color: #00796b;
+}
+
+/* New styles for mobile view */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .main-header {
+    padding: 10px 10px; /* Adjust header padding */
+  }
+
+  .navbar {
+    width: 95%; /* Adjust width of the navbar */
+  }
+
+  .logo {
+    width: 100px; /* Adjust logo size */
+  }
+
+  .gallery img {
+    width: calc(50% - 10px); /* Adjust image size for smaller screens */
+  }
+
+  /* Other adjustments as needed for a better mobile experience */
+}
+
+
+</style>
+</head>
+
+<body>
+   <!-- main header -->
+    <header class="main-header"> 
+        <!-- header left -->
+        <div class="header-left">
+            <ul class="topbar-info">
+                <li><i class="icon-pin"></i> Nellore, Andhra Pradesh</li>
+                <li><i class="icon-mail"></i> <a href="mailto:hackercamerawork@gmail.com">hackercamerawork@gmail.com</a></li>
+                <li><i class="icon-phone"></i> +91-7981471527</li>
+            </ul>
+        </div>
+        
+        <!-- header right -->
+        <div class="header-right"> 
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <!-- Your page content goes here -->
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo w.png" class="logo" style="margin-top: 10px;">
+            <ul>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="Posts.html" style="color: white;">Gallery</a></li>
+                <li><a href="Projects.html" style="color: white;">Projects</a></li>
+                <li><a href="About.html" style="color: white;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+<section class="contact-section">
+  <div class="container">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any inquiries or questions!</p>
+      <form action="submit_form.php" method="POST">
+          <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+      </form>
+  </div>
+</section>
+
+
+        <!--Footer Bottom-->
+        <div>
+            <footer>
+              <div class="footer-bottom">
+                <div class="container">
+                  <div class="container-wrapper">
+                    <div class="copyright-text"> All Rights Reserved &copy; 2021 | Hacker_Camerawork</div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <!--End pagewrapper--> 
+
+
+</body>
+</html> 
