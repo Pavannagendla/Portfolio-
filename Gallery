@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:: hacker_camerawork ::</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+body{
+  background-color: black;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e8597;
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e8597; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e8597; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #7e8597;
+    text-transform: Uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/* Style for the main header */
+.main-header {
+  background-color: #f7f7f7; /* Header background color */
+  color: #7e857e; /* Header text color */
+  padding: 15px 15px; /* Header padding */
+  display: flex;
+  justify-content: space-between; /* Align left and right content */
+  align-items: center; /* Vertically center content */
+}
+
+/* Style for the left end content */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; /* Adjust spacing from the left */
+}
+
+.header-left ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.header-left li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between elements */
+  font-size: 14px; /* Decrease font size */
+}
+
+.header-left a {
+  color: #7e857e; /* Left end text color */
+  text-decoration: none; /* Remove underlines */
+}
+
+/* Style for the right end content */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust spacing from the right */
+}
+
+/* Style for social media icons */
+.header-right a {
+  color: #7e857e; /* Social media icon color */
+  text-decoration: none; /* Remove underlines */
+  font-size: 18px; /* Decrease icon size */
+  margin-left: 20px; /* Adjust spacing between icons */
+}
+h3, h1, h2, p, h4{
+    color: white;
+}
+div{
+    color: #7e857e;
+}
+
+.bread-crumb {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.bread-crumb li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* About Section */
+.about-section-three {
+  padding: 60px 0;
+}
+
+.about-section-three h1 {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+.about-section-three p{
+  color: white;
+  font-size: 28px;
+  padding: 0 160px;
+}
+.about-section-three p:hover {
+  color: #ff9900;
+}
+
+.about-text-block {
+  text-align: center;
+}
+
+.top-content {
+  margin-bottom: 20px;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon {
+  font-size: 48px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto 20px;
+}
+
+.year-of-service {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+}
+.year-of-service:hover {
+  font-size: 24px;
+  color: white;
+}
+
+/* Footer Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 16px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between images */
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.gallery img {
+  width: calc(25% - 20px); /* Set width for 4 images in a row */
+  height: auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+ /* CSS for the enlarged image container within the modal */
+ #imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  #imageModal .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px; /* Rounded corners for the enlarged image */
+    overflow: hidden; /* Hide any overflow beyond the modal */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow for the modal */
+  }
+
+  #enlargedImage {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .enlarge {
+      transition: opacity 0.3s ease-in-out; /* Smooth transition */
+      margin: 5px;
+      padding: 5;
+      margin-bottom: 15px;
+      margin-right: 22px;
+      margin-left: 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  px;
+    }
+
+    /* Change opacity on hover */
+    .enlarge:hover {
+      opacity: 0.7; /* Adjust the opacity level as needed */
+    }
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    z-index: 9999;
+    overflow: auto;
+}
+  
+  /* Style the modal content (the image) */
+  .modal-content {
+    display: block;
+    margin: 10% auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    top: 40px;
+    left: 1420px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+/* New styles for mobile view */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .main-header {
+    padding: 10px 10px; /* Adjust header padding */
+  }
+
+  .navbar {
+    width: 95%; /* Adjust width of the navbar */
+  }
+
+  .logo {
+    width: 100px; /* Adjust logo size */
+  }
+
+  .gallery img {
+    width: calc(50% - 10px); /* Adjust image size for smaller screens */
+  }
+
+  /* Other adjustments as needed for a better mobile experience */
+}
+
+</style>
+</head>
+<body>
+
+   <!-- main header -->
+    <header class="main-header"> 
+        <!-- header left -->
+        <div class="header-left">
+            <ul class="topbar-info">
+                <li><i class="icon-pin"></i> Nellore, Andhra Pradesh</li>
+                <li><i class="icon-mail"></i> <a href="mailto:hackercamerawork@gmail.com">hackercamerawork@gmail.com</a></li>
+                <li><i class="icon-phone"></i> +91-7981471527</li>
+            </ul>
+        </div>
+        
+        <!-- header right -->
+        <div class="header-right"> 
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <!-- Your page content goes here -->
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo w.png" class="logo">
+            <ul>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="Posts.html" style="color: white;">Gallery</a></li>
+                <li><a href="Projects.html" style="color: white;">Projects</a></li>
+                <li><a href="About.html" style="color: white;">About</a></li>
+                <li><a href="contact.html" style="color: #fff;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="about-section-three sp-four grey-bg">
+      <div class="container">
+          <h1 style="font-size: 45px; text-align: center;">Gallery</h1>
+      </div>
+      <div class="row mb-50">
+          <div class="col-lg-12">
+              <div class="about-text-block">
+                  <!-- Your circular image here -->
+                  <div class="content-text" style="text-align: left;">
+                      <!-- Your "About Me" content here -->
+                      <p style="text-align: center;">Here are some of the images from my collection.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- Add a hidden modal container for enlarged images -->
+<div id="imageModal" class="modal" onclick="closeImageModal()">
+  <span class="close" onclick="closeImageModal()">&times;</span>
+  <div id="enlargedImageContainer">
+    <div class="arrow left-arrow" onclick="showPreviousImage()">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <img id="enlargedImage" class="modal-content" src="" alt="Enlarged Image">
+    <div class="arrow right-arrow" onclick="showNextImage()">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+</div>
+
+  <!-- Modify your image elements to trigger the modal when clicked -->
+  <div class="gallery">
+  <img src="Pigeon.jpg" alt="Image 1" class="enlarge" width="330px" height="480" loading="lazy" onclick="openImageModal('Pigeon.jpg')">
+  <img src="Graden Lizard.jpg" alt="Image 2" class="enlarge" width="330px" height="480" loading="lazy" onclick="openImageModal('Graden Lizard.jpg')">
+  <img src="Grey Langur.jpg" alt="Image 3" class="enlarge" width="330px" height="480" loading="lazy" onclick="openImageModal('Grey Langur.jpg')">
+  <img src="kissing birds.jpg" alt="Image 4" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('kissing birds.jpg')">
+  <img src="monkey.jpg" alt="Image 5" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('monkey.jpg')">
+  <img src="pi-geon.jpg" alt="Image 6" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('pi-geon.jpg')">
+  <img src="oldman.jpg" alt="Image 7" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('oldman.jpg')">
+  <img src="butterfly.jpg" alt="Image 8" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('butterfly.jpg')">
+  <img src="legpiece.jpg" alt="Image 9" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('legpiece.jpg')">
+  <img src="flower 2.jpg" alt="Image 10" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('flower 2.jpg')">
+  <img src="butterfly4.jpg" alt="Image 11" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('butterfly4.jpg')">
+  <img src="cat 2.jpg" alt="Image 12" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('cat 2.jpg')">
+  <img src="duck.jpg" alt="Image 13" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('duck.jpg')">
+  <img src="fan.jpg" alt="Image 14" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('fan.jpg')">
+  <img src="mango.jpg" alt="Image 15" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('mango.jpg')">
+  <img src="flower 3.jpg" alt="Image 16" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('flower 3.jpg')">
+  <img src="parrot.jpg" alt="Image 17" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('parrot.jpg')">
+  <img src="paddy.jpg" alt="Image 18" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('paddy.jpg')">
+  <img src="sunrise.jpg" alt="Image 19" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('sunrise.jpg')">
+  <img src="trees.jpg" alt="Image 20" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('trees.jpg')">
+  <img src="monkey 3.jpg" alt="Image 21" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('monkey 3.jpg')">
+  <img src="butterfly3.jpg" alt="Image 22" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('butterfly3.jpg')">
+  <img src="fruit.jpg" alt="Image 23" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('fruit.jpg')">
+  <img src="cat.jpg" alt="Image 24" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('cat.jpg')">
+  <img src="fan 2.jpg" alt="Image 25" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('fan 2.jpg')">
+  <img src="flower.jpg" alt="Image 26" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('flower.jpg')">
+  <img src="ganesha.jpg" alt="Image 27" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('ganesha.jpg')">
+  <img src="grassbaby.jpg" alt="Image 28" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('grassbaby.jpg')">
+  <img src="littlekrishna.jpg" alt="Image 29" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('littlekrishna.jpg')">
+  <img src="minigirl.jpg" alt="Image 30" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('minigirl.jpg')">
+  <img src="monkey2.jpg" alt="Image 31" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('monkey2.jpg')">
+  <img src="oldman.jpg" alt="Image 32" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('oldman.jpg')">
+  <img src="pigeon eye.jpg" alt="Image 33" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('pigeon eye.jpg')">
+  <img src="Rameshwaram.jpg" alt="Image 34" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('Rameshwaram.jpg')">
+  <img src="seagirl.jpg" alt="Image 35" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('seagirl.jpg')">
+  <img src="Squirrel.jpg" alt="Image 36" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('Squirrel.jpg')">
+  <img src="subramanya.jpg" alt="Image 37" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('subramanya.jpg')">
+  <img src="Tirumala.jpg" alt="Image 38" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('Tirumala.jpg')">
+  <img src="unknown.jpg" alt="Image 39" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('unknown.jpg')">
+  <img src="brihadeeshwara.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('brihadeeshwara.jpg')">
+  <img src="elephant1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('elephant1.jpg')">
+  <img src="elephant2.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('elephant2.jpg')">
+  <img src="elephant3.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('elephant3.jpg')">
+  <img src="nilgiri 1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('nilgiri 1.jpg')">
+  <img src="nilgiri 2.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('nilgiri 2.jpg')">
+  <img src="wild squirrel.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('wild squirrel.jpg')">
+  <img src="grey1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('grey1.jpg')">
+  <img src="puppy.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('puppy.jpg')">
+  <img src="lizard.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('lizard.jpg')">
+  <img src="flower3.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('flower3.jpg')">
+  <img src="flower4.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('flower4.jpg')">
+  <img src="ashok.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('ashok.jpg')">
+  <img src="evening1.JPG" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('evening1.jpg')">
+  <img src="evening2.JPG" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('evening2.jpg')">
+  <img src="babymom.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('babymom.jpg')">
+  <img src="g1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('g1.jpg')">
+  <img src="g2.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('g2.jpg')">
+  <img src="1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('1.jpg')">
+  <img src="1-1.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('1-1.jpg')">
+  <img src="b&w.jpg" alt="Image 40" class="enlarge" width="330px" height="480px" loading="lazy" onclick="openImageModal('b&w.jpg')">
+  <!-- Repeat this for other images -->
+  </div>
+
+  <!-- HTML Structure -->
+<div id="imageModal">
+  <span id="closeButton" onclick="closeImageModal()">&times;</span>
+  <img id="enlargedImage" src="" alt="Enlarged Image">
+</div>
+
+  
+    <!--Footer Bottom-->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="container-wrapper">
+          <div class="copyright-text"> All Rights Reserved &copy; 2021 | Hacker_Camerawork</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!--End pagewrapper-->
+
+   <!-- Your existing JavaScript for the modal -->
+   <script>
+
+
+function openImageModal(imagePath) {
+  const modal = document.getElementById("imageModal");
+  const enlargedImage = document.getElementById("enlargedImage");
+  enlargedImage.src = imagePath;
+  modal.style.display = "block";
+  currentImageIndex = images.indexOf(imagePath);
+}
+
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
+
+const brief = document.querySelector('.brief');
+
+brief.addEventListener('mouseenter', () => {
+  document.getElementById('brief-heading').style.display = 'none';
+  document.getElementById('brief-paragraph').style.display = 'block';
+});
+
+brief.addEventListener('mouseleave', () => {
+  document.getElementById('brief-heading').style.display = 'block';
+  document.getElementById('brief-paragraph').style.display = 'none';
+});
+
+
+
+  </script>
+   
+</body>
+</html> 
