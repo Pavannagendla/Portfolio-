@@ -485,7 +485,7 @@ h1{
                       <!-- Your circular image here -->
                       <div class="content-text" style="text-align: center;">
                           <!-- Your "About Me" content here -->
-                          <p class="para1">I am a graduate engineer by profession and a passionate photographer by choice.</p>
+                          <p>I am a graduate engineer by profession and a passionate photographer by choice.</p>
                       </div>
                   </div>
               </div>
